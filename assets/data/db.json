@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": "P1001",
+      "name": "Laptop Pro 15 GenAI",
+      "category": "Electronics",
+      "price": 3499.99,
+      "stock": 25,
+      "imageUrl": "assets/images/laptop_pro_15.png",
+      "description": "Laptop Pro 15 GenAI - Potęga i Mobilność w Jednym.\n\nWyposażony w najnowszej generacji procesor zoptymalizowany pod kątem AI, 32GB RAM oraz ultra-szybki dysk SSD NVMe 1TB.\nIdealny dla profesjonalistów, twórców treści i entuzjastów technologii.\n\nSpecyfikacja techniczna:\n• Procesor: Intel Core i9-13900H z AI Boost\n• RAM: 32GB DDR5-5600\n• Dysk: 1TB SSD NVMe PCIe 4.0\n• Grafika: NVIDIA RTX 4070 8GB\n• Matryca: OLED 15.6\" 3.5K (3456x2234) 120Hz\n• System: Windows 11 Pro\n• Waga: 1.8 kg\n• Bateria: do 12 godzin pracy\n\nGwarancja: 3 lata door-to-door"
+    },
+    {
+      "name": "Wireless Mouse v2213213",
+      "category": "Accessories",
+      "price": 129.5,
+      "stock": 250,
+      "imageUrl": "assets/images/wireless_mouse.png",
+      "description": "Ergonomiczna mysz bezprzewodowa v2 zapewnia komfort pracy przez wiele godzin.\n\nPrecyzyjny sensor optyczny, regulacja DPI (800-2400).\nCiche kliknięcia i programowalne przyciski boczne.\nPołączenie przez Bluetooth 5.0 lub odbiornik USB 2.4GHz.\n\nSpecyfikacja:\n• Sensor: Optyczny PixArt 3330\n• DPI: 800, 1200, 1600, 2400 (przełączalne)\n• Przyciski: 6 programowalnych\n• Łączność: Bluetooth 5.0 + USB 2.4GHz\n• Bateria: do 18 miesięcy (2x AA)\n• Wymiary: 125 x 68 x 40 mm\n• Waga: 95g (bez baterii)\n\nKompatybilność: Windows, macOS, Linux\nGwarancja: 2 lata",
+      "id": "P1002"
+    },
+    {
+      "name": "Mechanical Keyboard RGB123",
+      "category": "Gaming",
+      "price": 389,
+      "stock": 60,
+      "imageUrl": "assets/images/mechanical_keyboard.png",
+      "description": "Mechanical Gaming Keyboard RGB - Precyzja i Styl dla Graczy.\n\nPrzełączniki mechaniczne Cherry MX Red zapewniają szybką reakcję i długą żywotność.\nPełne podświetlenie RGB z 16.7 miliona kolorów i efektami świetlnymi.\n\nSpecyfikacja:\n• Przełączniki: Cherry MX Red (liniowe)\n• Layout: Full-size (104 klawisze)\n• Podświetlenie: RGB per-key\n• Połączenie: USB-C (kabel 1.8m)\n• Polling rate: 1000Hz\n• N-Key Rollover: Tak\n• Materiał: Aluminium + ABS\n• Wymiary: 440 x 135 x 35 mm\n\nOprogramowanie: Pełna personalizacja makr i podświetlenia\nGwarancja: 5 lat na przełączniki",
+      "id": "P1003"
+    },
+    {
+      "id": "P1004",
+      "name": "UltraWide QHD Monitor 34",
+      "category": "Electronics",
+      "price": 4020,
+      "stock": 40,
+      "imageUrl": "assets/images/ultrawide_monitor.png",
+      "description": "UltraWide QHD Monitor 34\" - Przestrzeń Robocza Nowej Generacji.\n\nZakrzywiony monitor ultrawide o rozdzielczości 3440x1440 z technologią IPS.\nIdealny do pracy wielozadaniowej, edycji wideo i gamingu.\n\nSpecyfikacja techniczna:\n• Przekątna: 34\" (86.4 cm)\n• Rozdzielczość: 3440 x 1440 (QHD)\n• Panel: IPS z zakrzywieniem 1800R\n• Odświeżanie: 144Hz\n• Czas reakcji: 1ms (MPRT)\n• Pokrycie kolorów: 99% sRGB, 95% DCI-P3\n• HDR: HDR10, 400 nits\n\nZłącza:\n• 2x HDMI 2.1\n• 1x DisplayPort 1.4\n• 1x USB-C (65W PD)\n• 4x USB 3.0\n\nFunkcje: Picture-by-Picture, Picture-in-Picture, AMD FreeSync Premium Pro\nGwarancja: 3 lata"
+    },
+    {
+      "id": "P1005",
+      "name": "Noise-Cancel Headphones",
+      "category": "Audio",
+      "price": 1999,
+      "stock": 75,
+      "imageUrl": "assets/images/headphones.png",
+      "description": "Smart Noise-Cancelling Headphones - Cisza i Jakość Dźwięku.\n\nAktywna redukcja szumów (ANC) eliminuje do 95% hałasu otoczenia.\nWysokiej jakości przetworniki 40mm zapewniają krystalicznie czysty dźwięk.\n\nSpecyfikacja:\n• Przetworniki: 40mm neodymowe\n• Pasmo przenoszenia: 20Hz - 40kHz\n• ANC: Aktywna redukcja szumów -35dB\n• Łączność: Bluetooth 5.3 + jack 3.5mm\n• Bateria: do 30h z ANC, 40h bez ANC\n• Szybkie ładowanie: 15 min = 3h pracy\n• Waga: 250g\n\nFunkcje smart:\n• Automatyczna pauza przy zdjęciu\n• Sterowanie gestami\n• Asystent głosowy\n• Aplikacja mobilna z equalizorem\n\nCertyfikaty: Hi-Res Audio, aptX HD\nGwarancja: 2 lata"
+    }
+  ]
+}
