@@ -1,6 +1,6 @@
-# AngularHttpresourceCatalogScss
+# AngularHttpresource
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13. 
 
 - Standalone Components
 - Angular Signals
@@ -11,4 +11,4 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## 🚀 Demo na żywo
 
-Sprawdź działającą aplikację: [Katalog Produktów Demo](#)
+Sprawdź działającą aplikację: [Katalog Produktów Demo](https://krzysztofkoczy.github.io/httpResource-Angular/)
