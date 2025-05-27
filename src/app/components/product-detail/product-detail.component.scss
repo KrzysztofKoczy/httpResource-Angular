@@ -1,0 +1,188 @@
+.product-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  
+  .navigation {
+    margin-bottom: 2rem;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 3rem 0;
+  
+    .spinner {
+      width: 3rem;
+      height: 3rem;
+      border: 4px solid #e5e7eb;
+      border-top: 4px solid #3b82f6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+  
+    p {
+      color: #6b7280;
+      font-size: 1.125rem;
+    }
+  }
+  
+  .error-container {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+  
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+    }
+  
+    p {
+      margin: 0 0 1.5rem 0;
+    }
+  }
+  
+  .product-detail {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .product-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .product-image-section {
+    .product-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      background: #f3f4f6;
+    }
+  }
+  
+  .product-info {
+    padding: 2rem;
+  
+    .product-header {
+      margin-bottom: 2rem;
+ 
+      h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #1f2937;
+        margin: 0 0 0.5rem 0;
+      }
+  
+      .product-id {
+        color: #6b7280;
+        font-size: 1.125rem;
+        margin: 0;
+      }
+    }
+  
+    .product-meta {
+      margin-bottom: 2rem;
+  
+      .badges {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+  
+      .price {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #3b82f6;
+        margin-bottom: 1rem;
+      }
+  
+      .stock-info {
+        color: #6b7280;
+        margin: 0;
+      }
+    }
+  
+    .product-description {
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin: 0 0 1rem 0;
+      }
+  
+      .description-content {
+        background: #f9fafb;
+        padding: 1.5rem;
+        border-radius: 8px;
+  
+        pre {
+          white-space: pre-wrap;
+          color: #374151;
+          font-family: inherit;
+          margin: 0 0 1rem 0;
+          line-height: 1.6;
+        }
+  
+        .loading-text {
+          color: #6b7280;
+          font-style: italic;
+          margin: 0;
+        }
+      }
+    }
+  
+    .actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+  }
+}
+  
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  
+  &.badge-category {
+    background: #dbeafe;
+    color: #1e40af;
+  }
+  
+  &.badge-success {
+    background: #d1fae5;
+    color: #065f46;
+  }
+  
+  &.badge-warning {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  &.badge-danger {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+}
+  
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

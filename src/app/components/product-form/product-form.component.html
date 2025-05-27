@@ -1,0 +1,140 @@
+<div class="product-form-container">
+  <div class="navigation">
+    <button class="btn btn-secondary"
+            (click)="goBack()">
+      ← Back
+    </button>
+  </div>
+
+  <div class="header">
+    <h1>{{ isEditMode ? 'Edit product' : 'Add new product' }}</h1>
+    <p>{{ isEditMode ? 'Update product' : 'Fill the form to add new product' }}</p>
+  </div>
+
+  <div class="form-container">
+    <form [formGroup]="productForm"
+          (ngSubmit)="submit()">
+      <div class="form-grid">  
+        <div class="form-group full-width">
+          <label for="name">Name *</label>
+          <input class="form-control"
+                 type="text"
+                 id="name"
+                 formControlName="name"
+                 placeholder="Product name"
+                 [class.error]="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+  
+          @if (productForm.get('name')?.invalid && productForm.get('name')?.touched) {
+            <div class="error-text">
+              Product name is required (min. 3 characters)
+            </div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category *</label>
+          <select class="form-control"
+                  id="category"
+                  formControlName="category"
+                  [class.error]="productForm.get('category')?.invalid && productForm.get('category')?.touched">
+            <option value="">Choose category</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Audio">Audio</option>
+            <option value="Software">Software</option>
+            <option value="Books">Books</option>
+          </select>
+  
+        @if (productForm.get('category')?.invalid && productForm.get('category')?.touched) {
+            <div class="error-text">
+              Category is required
+            </div>
+          }
+        </div>
+         <div class="form-group">
+          <label for="price">Price (PLN) *</label>
+          <input class="form-control"
+                 type="number"
+                 id="price"
+                 formControlName="price"
+                 step="0.01"
+                 min="0"
+                 max="10000"
+                 placeholder="0.00"
+                 [class.error]="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+
+          @if (productForm.get('price')?.invalid && productForm.get('price')?.touched) {
+            <div class="error-text">
+              The price must be in the range from 0 to 10000
+            </div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="stock">Stock *</label>
+          <input class="form-control"
+                 type="number"
+                 id="stock"
+                 formControlName="stock"
+                 max="10000"
+                 min="0"
+                 [class.error]="productForm.get('stock')?.invalid && productForm.get('stock')?.touched"
+                 placeholder="0">
+ 
+          @if (productForm.get('stock')?.invalid && productForm.get('stock')?.touched) {
+            <div class="error-text">
+              The stock must be in the range from 0 to 10000
+            </div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="imageUrl">Image URL</label>
+          <input class="form-control"
+                 type="url"
+                 id="imageUrl"
+                 formControlName="imageUrl"
+                 placeholder="https://example.com/image.jpg">
+          <p class="help-text">Optional - leave empty</p>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="description">Product description *</label>
+          <textarea class="form-control"
+                    id="description"
+                    formControlName="description"
+                    [class.error]="productForm.get('description')?.invalid && productForm.get('description')?.touched"
+                    placeholder="Product description"
+                    rows="5"></textarea>
+    
+          @if (productForm.get('description')?.invalid && productForm.get('description')?.touched) {
+            <div class="error-text">
+              Product description is required
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary"
+                type="submit"
+                [disabled]="productForm.invalid || product.isLoading()">
+          {{ isEditMode ? 'Update product' : 'Add product' }}
+        </button>
+            
+        <button class="btn btn-secondary"
+                type="button"
+                (click)="goBack()">
+          Cancel
+        </button>
+
+        <button class="btn btn-warning"
+                type="button"
+                (click)="resetForm()">
+          Reset form
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

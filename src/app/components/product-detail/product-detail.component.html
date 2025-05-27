@@ -1,0 +1,90 @@
+<div class="product-detail-container">
+  <div class="navigation">
+    <button class="btn btn-secondary"
+            (click)="goBack()">
+      ← Back to listy
+    </button>
+  </div>
+
+  @if (product.isLoading()) {
+    <div class="loading">
+      <div class="spinner"></div>
+      <p>Loading product details...</p>
+    </div>
+  }
+
+  @if (product.error()) {
+    <div class="error-container">
+      <h2>Error</h2>
+      <button class="btn btn-danger"
+              (click)="goBack()">
+        Go back to list
+      </button>
+    </div>
+  }
+
+  @if (product.value()[0]) {
+    <div class="product-detail">
+      <div class="product-layout">
+        <div class="product-image-section">
+          <img class="product-image"
+               [src]="product.value()[0].imageUrl"
+               [alt]="product.value()[0].name"
+               (error)="onImageError($event)">
+        </div>
+  
+        <div class="product-info">
+          <div class="product-header">
+            <h1>{{ product.value()[0].name }}</h1>
+            <p class="product-id">ID: {{ product.value()[0].id }}</p>
+          </div>
+  
+          <div class="product-meta">
+            <div class="badges">
+              <span class="badge badge-category">
+                {{ product.value()[0].category }}
+              </span>
+              <span class="badge"
+                    [ngClass]="getStockStatusClass()">
+                {{ getStockStatusText() }}
+              </span>
+            </div>
+                
+            <p class="price">
+              {{ product.value()[0].price }} PLN
+            </p>
+                
+            <p class="stock-info">
+              <strong>Stock:</strong> {{ product.value()[0].stock }} items
+            </p>
+          </div>
+  
+          <div class="product-description">
+            <h2>Product desctription</h2>
+            <div class="description-content">
+              @if (product.value()[0].description) {
+                <div>
+                  <pre>{{ product.value()[0].description }}</pre>
+                </div>
+              } @else {
+                <p class="loading-text">No description...</p>
+              }
+            </div>
+          </div>
+  
+          <div class="actions">
+            <a class="btn btn-warning"
+               [routerLink]="['/products', productId, 'edit']">
+              Edit product
+            </a>
+            <button class="btn btn-danger"
+                    [disabled]="product.isLoading()"
+                    (click)="deleteProduct()">
+              Delete product
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>
